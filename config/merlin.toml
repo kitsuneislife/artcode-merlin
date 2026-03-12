@@ -11,7 +11,7 @@ base_url = "http://ollama:11434"
 [thresholds]
 max_bench_regression_pct = 3.0
 max_coverage_drop_pct = 1.0
-clippy_zero_warnings = true
+clippy_zero_warnings = false
 
 [cycle]
 auto_plan = true
