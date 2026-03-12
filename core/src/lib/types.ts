@@ -3,6 +3,7 @@ export type MerlinConfig = {
     original: string;
     fork: string;
     branch_prefix: string;
+    fork_remote?: string;
   };
   llm: {
     provider: string;

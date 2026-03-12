@@ -48,6 +48,7 @@ export async function loadConfig(configPath: string): Promise<MerlinConfig> {
       original: asString(target.original, "target.original"),
       fork: asString(target.fork, "target.fork"),
       branch_prefix: asString(target.branch_prefix, "target.branch_prefix"),
+      fork_remote: target.fork_remote === undefined ? undefined : asString(target.fork_remote, "target.fork_remote"),
     },
     llm: {
       provider: asString(llm.provider, "llm.provider"),

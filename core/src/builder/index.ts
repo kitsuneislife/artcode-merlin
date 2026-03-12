@@ -155,6 +155,18 @@ export async function runBuilder(config: MerlinConfig, plan: Plan, logger: Logge
     });
   }
 
+  if (config.target.fork_remote) {
+    const push = runCommand(["git", "push", config.target.fork_remote, baseBranch], forkPath);
+    if (push.exitCode !== 0) {
+      logger.warn("push para remote falhou; commit local preservado", {
+        remote: config.target.fork_remote,
+        stderr: push.stderr,
+      });
+    } else {
+      logger.info("fork sincronizado com remote", { remote: config.target.fork_remote, branch: baseBranch });
+    }
+  }
+
   const committed: BuilderResult = {
     status: "committed",
     stage_id: plan.stage_id,

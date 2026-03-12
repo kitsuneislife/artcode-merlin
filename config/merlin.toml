@@ -2,6 +2,7 @@
 original = "/workspace/original"
 fork = "/workspace/fork"
 branch_prefix = "stage"
+fork_remote = "github"
 
 [llm]
 provider = "ollama"

@@ -36,6 +36,7 @@ services:
       - ./logs:/workspace/logs:rw
       - ./contracts:/workspace/contracts:ro
       - ./config:/workspace/config:ro
+      - ./.secrets/merlin_deploy_key:/root/.ssh/merlin_deploy_key:ro
 
 volumes:
   ollama-models:
