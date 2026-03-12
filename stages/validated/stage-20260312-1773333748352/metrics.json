@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-03-12T16:44:11.985Z",
+  "stage_id": "stage-20260312-1773333748352",
+  "commit_distance_ahead": 9,
+  "duration_ms": {
+    "test": 3198,
+    "clippy": 538,
+    "bench": 23394
+  },
+  "delta_pct_vs_observer": {
+    "test": -56.14371914426769,
+    "clippy": 11.618257261410788,
+    "bench": -18.734150831972766
+  },
+  "baseline_bench_gate": {
+    "baseline_ms": 77165,
+    "current_ms": 23394,
+    "regression_pct": -69.68314650424415,
+    "threshold_pct": 3,
+    "baseline_source": "existing"
+  }
+}
