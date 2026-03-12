@@ -1,0 +1,9 @@
+{
+  "stage_id": "stage-20260312-1773334177295",
+  "target_crate": "interpreter",
+  "change_type": "refactor",
+  "metric_target": "code_complexity",
+  "expected_delta": "-5%",
+  "rationale": "A recente melhoria em `interpreter` demonstrou sucesso em reduzir a complexidade do código. Uma refatoração focada em simplificar a lógica interna do módulo pode continuar nessa tendência, com foco em partes específicas que apresentam maior complexidade. Isso ajuda a manter a manutenção e escalabilidade do código sem aumentar significativamente o risco.",
+  "risk": "low"
+}

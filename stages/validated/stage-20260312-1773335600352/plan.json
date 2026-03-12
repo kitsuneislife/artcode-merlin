@@ -1,0 +1,9 @@
+{
+  "stage_id": "stage-20260312-1773335600352",
+  "target_crate": "interpreter",
+  "change_type": "refactor",
+  "metric_target": "clippy_exit",
+  "expected_delta": "decremental",
+  "rationale": "O último experimento de stage apresentou um aumento significativo no clippy_exit, portanto, uma refatoração local e de baixo risco pode ajudar a estabilizar essa métrica.",
+  "risk": "low"
+}

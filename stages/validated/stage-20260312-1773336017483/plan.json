@@ -1,0 +1,9 @@
+{
+  "stage_id": "stage-20260312-1773336017483",
+  "target_crate": "interpreter",
+  "change_type": "refactor",
+  "metric_target": "clippy_exit",
+  "expected_delta": "<100",
+  "rationale": "A diminuição do número de erros de estilo em código (clippy) é uma indicativa de melhoria na qualidade do código-fonte. Refatorar partes específicas do crate interpreter pode reduzir esses erros sem aumentar significativamente o risco.",
+  "risk": "low"
+}

@@ -1,0 +1,9 @@
+{
+  "stage_id": "stage-20260312-1773334606012",
+  "target_crate": "interpreter",
+  "change_type": "refactor",
+  "metric_target": "clippy_exit",
+  "expected_delta": "-1",
+  "rationale": "Baixo risco: Refatoração deve não aumentar clippy_exit. Escopo pequeno: Melhoria de um módulo específico sem impacto amplo.",
+  "risk": "low"
+}

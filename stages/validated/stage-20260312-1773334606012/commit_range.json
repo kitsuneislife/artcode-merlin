@@ -1,0 +1,7 @@
+{
+  "stage_id": "stage-20260312-1773334606012",
+  "branch": "main",
+  "from": "HEAD~1",
+  "to": "4406c06cdea0954c94706f07ccfef88f7bab0f4a",
+  "stage_branch": "stage-stage-20260312-1773334606012"
+}

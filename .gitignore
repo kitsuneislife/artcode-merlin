@@ -9,6 +9,7 @@ db/*.sqlite3
 logs/*.log
 logs/*.json
 fork/
-stages/active/
+stages/active/1
 baselines/snapshot-*.json
-
+.secrets/
+merlin_deploy_key.pub

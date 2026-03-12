@@ -1,0 +1,29 @@
+{
+  "stage_id": "stage-20260312-1773336017483",
+  "stable": true,
+  "reason": "stage validado e artifacts gerados",
+  "checks": {
+    "tests_pass": true,
+    "clippy_pass": false,
+    "bench_pass": true,
+    "bench_regression_within_threshold": true,
+    "invariants_pass": true,
+    "diff_scope_coherent": true,
+    "changelog_generated": true,
+    "stability_met": true
+  },
+  "stability": {
+    "consecutive_clean": 3,
+    "required_clean": 3
+  },
+  "benchmark": {
+    "baseline_ms": 77165,
+    "current_ms": 23443,
+    "regression_pct": -69.61964621266118,
+    "threshold_pct": 3,
+    "baseline_source": "existing"
+  },
+  "benchmark_failures": [],
+  "invariant_failures": [],
+  "diff_failures": []
+}

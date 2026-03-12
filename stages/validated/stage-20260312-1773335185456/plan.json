@@ -1,0 +1,9 @@
+{
+  "stage_id": "stage-20260312-1773335185456",
+  "target_crate": "interpreter",
+  "change_type": "refactor",
+  "metric_target": "clippy_exit",
+  "expected_delta": "-100",
+  "rationale": "A última experiência falhou devido ao clippy_exit. Vamos refatorar uma pequena parte do código em interpreter para melhorar a qualidade sem aumentar risco.",
+  "risk": "low"
+}
