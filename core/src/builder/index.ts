@@ -119,7 +119,8 @@ export async function runBuilder(config: MerlinConfig, plan: Plan, logger: Logge
   const clippy = runCommand(["cargo", "clippy", "--all-targets", "--all-features", "--", "-D", "warnings"], forkPath);
   const bench = runCommand(["cargo", "bench"], forkPath);
 
-  if (test.exitCode !== 0 || clippy.exitCode !== 0 || bench.exitCode !== 0) {
+  const clippyFailed = config.thresholds.clippy_zero_warnings && clippy.exitCode !== 0;
+  if (test.exitCode !== 0 || clippyFailed || bench.exitCode !== 0) {
     runCommand(["git", "checkout", baseBranch], forkPath);
     runCommand(["git", "branch", "-D", stageBranch], forkPath);
 

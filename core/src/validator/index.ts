@@ -28,6 +28,7 @@ export async function runValidator(
   const stability = db ? evaluateStability(db, config.stages.stability_min_commits) : { stable: false, consecutiveClean: 0, requiredClean: config.stages.stability_min_commits };
   const testsPass = build.gates.test.exitCode === 0;
   const clippyPass = build.gates.clippy.exitCode === 0;
+  const clippyGateRequired = config.thresholds.clippy_zero_warnings;
   const benchPass = build.gates.bench.exitCode === 0;
   const invariantsPass = invariants.pass;
   const diffScopeCoherent = diffAudit.coherent;
@@ -74,7 +75,7 @@ export async function runValidator(
     stable:
       build.status === "committed" &&
       testsPass &&
-      clippyPass &&
+      (!clippyGateRequired || clippyPass) &&
       benchPass &&
       benchGatePass &&
       invariantsPass &&
