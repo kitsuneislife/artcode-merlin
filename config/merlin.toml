@@ -1,0 +1,29 @@
+[target]
+original = "/workspace/original"
+fork = "/workspace/fork"
+branch_prefix = "stage"
+
+[llm]
+provider = "ollama"
+model = "qwen2.5-coder:7b"
+base_url = "http://ollama:11434"
+
+[thresholds]
+max_bench_regression_pct = 3.0
+max_coverage_drop_pct = 1.0
+clippy_zero_warnings = true
+
+[cycle]
+auto_plan = true
+auto_build = true
+auto_pr = false
+require_human_merge = true
+interval_seconds = 300
+max_iterations = 0
+
+[stages]
+max_concurrent = 1
+stability_min_commits = 3
+
+[contracts]
+checker_command = "bash /workspace/contracts/check.sh"

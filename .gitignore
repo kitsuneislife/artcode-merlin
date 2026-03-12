@@ -1,0 +1,14 @@
+.vscode/
+.kit/
+.env
+core/node_modules/
+core/dist/
+db/*.db
+db/*.sqlite
+db/*.sqlite3
+logs/*.log
+logs/*.json
+fork/
+stages/active/
+baselines/snapshot-*.json
+

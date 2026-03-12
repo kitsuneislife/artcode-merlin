@@ -1,0 +1,41 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: merlin-ollama
+    command: ["serve"]
+    restart: unless-stopped
+    volumes:
+      - ollama-models:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+
+  merlin-agent:
+    build:
+      context: .
+      dockerfile: docker/merlin.Dockerfile
+    container_name: merlin-agent
+    restart: unless-stopped
+    depends_on:
+      ollama:
+        condition: service_healthy
+    environment:
+      OLLAMA_BASE_URL: http://ollama:11434
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen2.5-coder:7b}
+      MERLIN_LOG_LEVEL: ${MERLIN_LOG_LEVEL:-info}
+      MERLIN_CONFIG_PATH: /workspace/config/merlin.toml
+      MERLIN_DB_PATH: /workspace/db/merlin.sqlite
+    volumes:
+      - ./fork/artcode:/workspace/fork:rw
+      - ${ARTCODE_REPO_PATH:-../artcode}:/workspace/original:ro
+      - ./stages:/workspace/stages:rw
+      - ./baselines:/workspace/baselines:rw
+      - ./db:/workspace/db:rw
+      - ./logs:/workspace/logs:rw
+      - ./contracts:/workspace/contracts:ro
+      - ./config:/workspace/config:ro
+
+volumes:
+  ollama-models:

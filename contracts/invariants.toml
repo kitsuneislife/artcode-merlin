@@ -1,0 +1,4 @@
+[[programs]]
+id = "hello-world"
+file = "contracts/programs/hello.art"
+expected_output = "hello\n"
