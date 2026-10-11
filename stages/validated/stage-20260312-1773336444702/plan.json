@@ -1,0 +1,9 @@
+{
+  "stage_id": "stage-20260312-1773336444702",
+  "target_crate": "interpreter",
+  "change_type": "refactor",
+  "metric_target": "clippy_exit",
+  "expected_delta": "-1",
+  "rationale": "Abaixar a saída do clippy pode indicar que os avisos foram corrigidos ou que a qualidade do código foi melhorada. Escolhendo um refactor no crate interpreter, que tem baixo risco e escopo pequeno, podemos focar em pequenas melhorias que possam reduzir os avisos do clippy.",
+  "risk": "low"
+}

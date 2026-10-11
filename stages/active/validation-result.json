@@ -1,5 +1,5 @@
 {
-  "stage_id": "stage-20260312-1773336017483",
+  "stage_id": "stage-20260312-1773336876239",
   "stable": true,
   "reason": "stage validado e artifacts gerados",
   "checks": {
@@ -18,8 +18,8 @@
   },
   "benchmark": {
     "baseline_ms": 77165,
-    "current_ms": 23443,
-    "regression_pct": -69.61964621266118,
+    "current_ms": 21384,
+    "regression_pct": -72.287954383464,
     "threshold_pct": 3,
     "baseline_source": "existing"
   },
